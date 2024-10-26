@@ -67,14 +67,17 @@
 		padding : 11px 18px 11px 18px;
 	}
 	
-	input{
+	#search{
 		border-radius: 15px;
 		background-color: white;
 		border: 0;
 		height: 30px;
 		color:grey;
 		padding-left:15px;
-		width: 220px;	
+		width: 220px;
+		display: flex;
+		flex-direction: row;
+		gap:8px;
 	}
 	
 	.wrapper{
@@ -149,7 +152,7 @@
 	<div style="display:flex;flex-direction:row;gap:30px;align-items:center">
 
 		<p style="margin-left:30px;cursor:pointer;" onmouseover="dropdown.style.display = 'flex'; this.style.color = '#565564'" onmouseout="dropdown.style.display = 
-		'none';this.style.color = 'black'">Find designers</p> 
+		'none';this.style.color = 'black'" onclick="window.location.href='https://dribbble.com/designers'" >Find designers</p> 
 		
 		<i style="margin-left:-23px;width:6px" class="fa-solid fa-chevron-down fa-2xs"></i>
 		
@@ -166,11 +169,15 @@
 	<img style="cursor:pointer" width=85px src="Logo.svg" onclick="window.location.href='https://dribbble.com'">
 
 	<div style="display:flex;flex-direction:row;gap:30px;align-items:center">	
-		<input type="text" placeholder="Search..">
+				
+		<div id="search">
+			<i style="margin-top:15px;" class="fa-solid fa-magnifying-glass fa-xs"></i>
+			<input type="text" style="position:relative;right:3px;border:0;margin-top:3px;width:inherit;outline:0" placeholder="Search.."> </input>
+		</div>
 
 		<p style="cursor:pointer" onmouseover="this.style.color = '#565564'" onmouseout="this.style.color = 'black'"
 		onclick="window.location.href='https://dribbble.com/session/new'">Login</p>
-
+	
 		<button style="margin-right:30px" onmouseover="this.style.backgroundColor = '#565564'" onmouseout="this.style.backgroundColor = 'black'"
 		onclick="window.location.href='https://dribbble.com/signup/new'"> Sign up </button>
 	</div>
