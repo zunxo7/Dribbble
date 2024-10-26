@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://kit.fontawesome.com/70cc5478d5.js" crossorigin="anonymous"></script>
+<title> Dribbble </title>
+<link href="https://cdn.dribbble.com/assets/favicon-452601365a822699d1d5db718ddf7499d036e8c2f7da69e85160a4d2f83534bd.ico" rel="icon" sizes="any" />
+<style>
+	#thing, p, button, .option, .text, .skill{
+		font-family: 'Inter', 'Proxima Nova', sans-serif; 
+		font-weight:bold;
+		font-size: 13px;
+	}
+
+	button{
+		font-size: 10px;
+	}
+
+	#thing{
+		display:inline;
+		background-color:#D8C8ED;
+		border-radius:20px;
+		padding: 5px 12px 5px 12px;
+		text-align:center;
+		font-size: 12px;
+		margin-top: 55px;
+		margin-bottom: -20px;
+	}
+	
+	body{	
+		margin-top: 12px;
+		background-color: #FAF9F6;
+	}
+
+	#dropdown{
+		background-color: #FFFFFF;
+		border: 0;
+		outline: none;
+		width: auto;
+		height: 135px;
+		display: flex;
+		flex-direction: column;
+		border-radius: 7px;
+		gap: 20px;
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow */
+		justify-content:center;
+		position: relative;
+		top:25px;
+		margin-left: 15px;
+		display:none;
+	}
+
+	.option{
+		margin-left:20px;
+		margin-right:45px;
+	}
+
+	label{
+		cursor:pointer;
+	}
+	
+	button{
+		cursor:pointer;
+		border-radius: 15px;
+		background-color: black;
+		color: white;
+		border: 0;
+		padding : 11px 18px 11px 18px;
+	}
+	
+	input{
+		border-radius: 15px;
+		background-color: white;
+		border: 0;
+		height: 30px;
+		color:grey;
+		padding-left:15px;
+		width: 220px;	
+	}
+	
+	.wrapper{
+		margin-top: 45px;
+		border-radius: 23px;
+		height: 240px;
+		width: 196px;
+	}
+	
+	.info{
+		position:relative;
+		display:flex;bottom:70px;
+		left:15px;
+		flex-direction:column;
+		gap:3px;
+		height:30px;
+	}
+	
+	.text{	
+		font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: white;
+		font-size: 11.5px;
+		cursor: default;
+	}
+
+	.skill{
+		font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color:white;
+		border: 0.1px solid rgba(255, 255, 255, 0.5);
+		border-radius: 10px;
+		text-align:center;
+		padding: 5px 10px 4px 10px;
+		background-color: transparent;
+		font-size: 9.5px;
+		margin-top:3px;
+		cursor: default;
+	}
+
+</style>
+</head>
+
+<body>
+
+<div style="height:170px;width:auto;position:absolute;top:50px;" onmouseout="dropdown.style.display = 'none'" onmouseover="dropdown.style.display = 'flex'">
+	<div id="dropdown" onmouseout="dropdown.style.display = 'none'" onmouseover="dropdown.style.display = 'flex'">
+		
+		<div class="option">
+			<i style="margin-right:1px" class="fa-solid fa-magnifying-glass fa-lg"></i> 
+
+			<label style="margin-left:2px;" onmouseover="this.style.color = '#565564'" onmouseout="this.style.color = 'black'" 
+			onclick="window.location.href='https://dribbble.com/designers'">Browse Designers</label>
+		</div>
+
+		<div class="option">
+			<i style="margin-left: 1px" class="fa-regular fa-file-lines fa-lg"></i> 
+
+			<label style="margin-left:5px;" onmouseover="this.style.color = '#565564'" onmouseout="this.style.color = 'black'" 
+			onclick="window.location.href='https://dribbble.com/jobs/new'">Post a Job</label>
+		</div>
+
+		<div class="option">
+			<i class="fa-solid fa-circle-info fa-lg"></i> 
+		
+			<label style="margin-left:3px;" onmouseover="this.style.color = '#565564'" onmouseout="this.style.color = 'black'" 
+			onclick="window.location.href='https://dribbble.com/hiring'">Hiring on Dribbble</label>
+		</div>
+	</div>
+</div>
+
+<div style="display:flex;flex-direction:row;gap:30px;justify-content:space-between;align-items:center">
+
+	<div style="display:flex;flex-direction:row;gap:30px;align-items:center">
+
+		<p style="margin-left:30px;cursor:pointer;" onmouseover="dropdown.style.display = 'flex'; this.style.color = '#565564'" onmouseout="dropdown.style.display = 
+		'none';this.style.color = 'black'">Find designers</p> 
+		
+		<i style="margin-left:-23px;width:6px" class="fa-solid fa-chevron-down fa-2xs"></i>
+		
+		<p style="cursor:pointer;" onmouseover="this.style.color = '#565564'" onmouseout="this.style.color = 'black'" 						
+		onclick="window.location.href='https://dribbble.com/tags/inspiration'">Inspiration</p>
+
+		<p style="cursor:pointer;" onmouseover="this.style.color = '#565564'" onmouseout="this.style.color = 'black'" 
+		onclick="window.location.href='https://dribbble.com/jobs'">Jobs</p>
+		
+		<p style="cursor:pointer;margin-right:15px;" onmouseover="this.style.color = '#565564'" onmouseout="this.style.color = 'black'" 			
+		onclick="window.location.href='https://dribbble.com/pro'">Go Pro</p>
+	</div>
+
+	<img style="cursor:pointer" width=85px src="Logo.svg" onclick="window.location.href='https://dribbble.com'">
+
+	<div style="display:flex;flex-direction:row;gap:30px;align-items:center">	
+		<input type="text" placeholder="Search..">
+
+		<p style="cursor:pointer" onmouseover="this.style.color = '#565564'" onmouseout="this.style.color = 'black'"
+		onclick="window.location.href='https://dribbble.com/session/new'">Login</p>
+
+		<button style="margin-right:30px" onmouseover="this.style.backgroundColor = '#565564'" onmouseout="this.style.backgroundColor = 'black'"
+		onclick="window.location.href='https://dribbble.com/signup/new'"> Sign up </button>
+	</div>
+
+</div>
+
+<div style="display:flex;flex-direction:column;gap:-30px;align-items:center;margin-right:50px;">
+	<div id="thing">Over 3 million ready-to-work creatives!</div>
+	
+	<div>
+		<p style="font-family: 'Georgia', serif;font-size:50px;font-weight:normal"> The world's destination </p>
+		<p style="font-family: 'Georgia', serif;font-size:50px;font-weight:normal;margin-top:-50px;text-align:center">for design </p>
+	</div>
+
+	<p style="margin-top:-25px">Get inspired by the work of millions of top-rated designers & agencies around the world.</p> 
+
+	<button style="margin-top:14px" onmouseover="this.style.backgroundColor = '#565564'" onmouseout="this.style.backgroundColor = 'black'"
+	onclick="window.location.href='https://dribbble.com/signup/new?return_to_after_signup=%2Fget-started'" > Get Started </button>
+</div>
+
+<div style="display: flex;flex-direction:row; gap:21px;justify-content:center;margin-top:5px">
+	<div>
+		<img class="wrapper" src="1.png">
+		<div class="info">
+			<label class="text">Elif Kameşoğlu</label>
+			<label class="text">Brand Designer</label>
+		
+			<div style="display:flex; flex-direction:row; gap:5px">
+				<div class="skill" style="width:29px">Brand</div>
+				<div class="skill" style="width:47px">Illustration</div>
+				<div class="skill" style="width:23px">Web</div>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<img class="wrapper" src="2.png">
+		<div class="info">
+			<label class="text">Chris Owens</label>
+			<label class="text">Creative Director</label>
+		
+			<div style="display:flex; flex-direction:row; gap:5px">
+				<div class="skill" style="width:47px">Illustration</div>
+				<div class="skill" style="width:29px">Mobile</div>
+				<div class="skill" style="width:9px">UI</div>
+			</div>
+		</div>
+	</div>
+	
+	<div>
+		<img class="wrapper" src="3.png">
+		<div class="info">
+			<label class="text">Danielle Buffa</label>
+			<label class="text">Principal Designer</label>
+		
+			<div style="display:flex; flex-direction:row; gap:5px">
+				<div class="skill" style="width:49px">Animation</div>
+				<div class="skill" style="width:9px">UI</div>
+				<div class="skill" style="width:31px">Visual</div>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<img class="wrapper" src="4.png">
+		<div class="info">
+			<label class="text">Aurélien Salomon</label>
+			<label class="text">Design Director</label>
+		
+			<div style="display:flex; flex-direction:row; gap:5px">
+				<div class="skill" style="width:29px">Mobile</div>
+				<div class="skill" style="width:35px">Product</div>
+				<div class="skill" style="width:13px">UX</div>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<img class="wrapper" src="5.png">
+		<div class="info">
+			<label class="text">Mercedes Bazan</label>
+			<label class="text">Illustrator</label>
+		
+			<div style="display:flex; flex-direction:row; gap:5px">
+				<div class="skill" style="width:71px">Graphic Design</div>
+				<div class="skill" style="width:47px">Illustration</div>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<img class="wrapper" src="6.png">
+		<div class="info">
+			<label class="text">Lilla Bardenova</label>
+			<label class="text">Brand + Illustrator</label>
+		
+			<div style="display:flex; flex-direction:row; gap:5px">
+				<div class="skill" style="width:29px">Brand</div>
+				<div class="skill" style="width:47px">Illustration</div>
+				<div class="skill" style="width:23px">Web</div>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<img class="wrapper" src="7.png">
+		<div class="info">
+			<label class="text">Victa Wille</label>
+			<label class="text">Digital Designer</label>
+		
+			<div style="display:flex; flex-direction:row; gap:5px">
+				<div class="skill" style="width:29px">Mobile</div>
+				<div class="skill" style="width:8px">UI</div>
+				<div class="skill" style="width:23px">Web</div>
+			</div>
+		</div>
+	</div>
+</div>
